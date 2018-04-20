@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Implementation of progressbar.js in React with ES6",
   "main": "build/index.js",
-  "license": "ISC",
+  "homepage": "https://github.com/ronaldroe/react-es6-progressbar.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronaldroe/react-es6-progressbar.js.git"
+  },
   "dependencies": {
     "progressbar.js": "^1.0.1",
     "react": "^16.3.2"
