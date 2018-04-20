@@ -1,0 +1,26 @@
+{
+  "name": "react-es6-progressbar.js",
+  "version": "1.0.0",
+  "description": "Implementation of progressbar.js in React with ES6",
+  "main": "build/index.js",
+  "license": "ISC",
+  "dependencies": {
+    "progressbar.js": "^1.0.1",
+    "react": "^16.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Ronald Roe"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
+  }
+}
