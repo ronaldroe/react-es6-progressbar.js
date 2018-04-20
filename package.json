@@ -5,6 +5,10 @@
   "main": "build/index.js",
   "homepage": "https://github.com/ronaldroe/react-es6-progressbar.js",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "progressbar.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ronaldroe/react-es6-progressbar.js.git"
