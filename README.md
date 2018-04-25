@@ -41,9 +41,9 @@ class App extends Component{
 
     return(
 
-      <Circle options={circle_options} container_style={{height: '200px', width: '200px'}} />
-      <SemiCircle options={semicircle_options} container_style={{height: '200px', width: '200px'}} />
-      <Line options={line_options} container_style={{height: '200px', width: '200px'}} />
+      <Circle progress={0.75} options={circle_options} container_style={{height: '200px', width: '200px'}} />
+      <SemiCircle progress={0.33} options={semicircle_options} container_style={{height: '200px', width: '200px'}} />
+      <Line progress={1.0} options={line_options} container_style={{height: '200px', width: '200px'}} />
 
     );
 
@@ -56,8 +56,9 @@ class App extends Component{
 
 | Prop | Type | Default | Usage |
 |------|:------:|:-------:|-------|
+| container_class | **String** | *null* | Class to be added to container element                                                                                                   |
 | container_style | **Object** | *null* | CSS styles for the container element                                                                                                     |
-| progress        | **Number** | *0.5*  | [ProgressBar.js animation progress](http://progressbarjs.readthedocs.io/en/latest/api/shape/#animateprogress-options-cb) in seconds      |
+| progress        | **Number** | *0.5*  | [ProgressBar.js progress amount](http://progressbarjs.readthedocs.io/en/latest/api/shape/#animateprogress-options-cb) from 0 to 1, where 1 is 100% of the distance.      |
 | options         | **Object** | *null* | [ProgressBar.js shape container options](http://progressbarjs.readthedocs.io/en/latest/api/shape/#new-shapecontainer-options)            |
 
 ## Licence

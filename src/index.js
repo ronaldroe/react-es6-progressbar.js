@@ -40,11 +40,14 @@ class Shape extends Component{
   }
   
   render(){
+
+    const container_class = this.props.container_class || 'progressbar_container';
     
     return(
     
       <div
         ref={this.progressBar}
+        className={this.props.container_class}
         style={this.props.container_style}
       ></div>
     
