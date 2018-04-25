@@ -58,7 +58,7 @@ class App extends Component{
 |------|:------:|:-------:|-------|
 | container_class | **String** | *null* | Class to be added to container element                                                                                                   |
 | container_style | **Object** | *null* | CSS styles for the container element                                                                                                     |
-| progress        | **Number** | *0.5*  | [ProgressBar.js progress amount](http://progressbarjs.readthedocs.io/en/latest/api/shape/#animateprogress-options-cb) from 0 to 1, where 1 is 100% of the distance.      |
+| progress        | **Number** | *0.5*  | [ProgressBar.js progress amount](http://progressbarjs.readthedocs.io/en/latest/api/shape/#animateprogress-options-cb) from 0 to 1, where 1 is 100% of the distance.     |
 | options         | **Object** | *null* | [ProgressBar.js shape container options](http://progressbarjs.readthedocs.io/en/latest/api/shape/#new-shapecontainer-options)            |
 
 ## Licence

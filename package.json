@@ -1,10 +1,11 @@
 {
   "name": "react-es6-progressbar.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Implementation of progressbar.js in React with ES6",
   "main": "build/index.js",
   "homepage": "https://github.com/ronaldroe/react-es6-progressbar.js",
   "license": "MIT",
+  "private": false,
   "keywords": [
     "react",
     "progressbar.js"
