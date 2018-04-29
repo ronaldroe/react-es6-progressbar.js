@@ -47,7 +47,7 @@ class Shape extends Component{
     
       <div
         ref={this.progressBar}
-        className={this.props.container_class}
+        className='progressbar-container'
         style={this.props.container_style}
       ></div>
     
