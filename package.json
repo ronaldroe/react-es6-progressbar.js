@@ -1,6 +1,6 @@
 {
   "name": "react-es6-progressbar.js",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Implementation of progressbar.js in React with ES6",
   "main": "build/index.js",
   "homepage": "https://github.com/ronaldroe/react-es6-progressbar.js",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1"

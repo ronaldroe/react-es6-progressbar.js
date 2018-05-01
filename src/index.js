@@ -47,7 +47,7 @@ class Shape extends Component{
     
       <div
         ref={this.progressBar}
-        className='progressbar-container'
+        className={this.props.container_class}
         style={this.props.container_style}
       ></div>
     
@@ -59,19 +59,19 @@ class Shape extends Component{
 
 const Circle = props => (
   
-  <Shape type='circle' options={props.options} {...props} />
+  <Shape type='circle' container_class={props.container_class} options={props.options} {...props} />
   
 );
 
 const SemiCircle = props => (
   
-  <Shape type='semicircle' options={props.options} {...props} />
+  <Shape type='semicircle' container_class={props.container_class} options={props.options} {...props} />
   
 );
 
 const Line = props => (
   
-  <Shape type='line' options={props.options} {...props} />
+  <Shape type='line' container_class={props.container_class} options={props.options} {...props} />
   
 );
 
