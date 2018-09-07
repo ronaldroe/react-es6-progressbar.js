@@ -41,7 +41,7 @@ class Shape extends Component{
   
   render(){
 
-    let container_class = typeof this.props.container_class === 'undefined' ? this.props.container_class : '';
+    let container_class = typeof this.props.container_class !== 'undefined' ? this.props.container_class : '';
     
     return(
     
