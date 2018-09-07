@@ -41,12 +41,13 @@ class Shape extends Component{
   
   render(){
 
+    let container_class = typeof this.props.container_class === 'undefined' ? this.props.container_class : '';
     
     return(
     
       <div
         ref={this.progressBar}
-        className={`progressbar-container ${this.props.container_class}`}
+        className={`progressbar-container ${container_class}`}
         style={this.props.container_style}
       ></div>
     
