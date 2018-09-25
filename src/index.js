@@ -35,7 +35,21 @@ class Shape extends Component{
     
     shape = new ShapeType(this.progressBar.current, input_options, this.props.callback);
     
-    shape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5);
+    // When a page loads, componentDidMount fires before readyState is set to complete. Animations then fire before some of the 
+    // visible content is loaded, which results in visible jank and lack of animation.
+    // This will check that the document is completely loaded and ready before firing the animation.
+    let chkRdy = setInterval(() => {
+
+      if(document.readyState === 'complete'){
+
+        shape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5);
+        
+        clearInterval(chkRdy);
+
+      }
+
+    }, 50)
+
     
   }
   
