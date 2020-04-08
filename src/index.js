@@ -22,6 +22,8 @@ class Shape extends Component {
   componentDidMount() {
     let ShapeType, shape, text_val
 
+    console.log('MOUNTED BABY')
+
     if (this.props.type === 'line') {
       ShapeType = ProgressBar.Line
     } else if (this.props.type === 'semicircle') {
