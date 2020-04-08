@@ -11,18 +11,13 @@ class Shape extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('Updates to progressbar received', this.props)
-
     if (this.props.progress !== prevProps.progress) {
-      console.log('trying to animate')
       this.shape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5)
     }
   }
 
   componentDidMount() {
     let ShapeType, shape, text_val
-
-    console.log('MOUNTED BABY')
 
     if (this.props.type === 'line') {
       ShapeType = ProgressBar.Line
@@ -47,7 +42,6 @@ class Shape extends Component {
     let chkRdy = setInterval(() => {
       if (document.readyState === 'complete') {
         shape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5)
-        console.log('Progress Bar ready')
 
         clearInterval(chkRdy)
       }
