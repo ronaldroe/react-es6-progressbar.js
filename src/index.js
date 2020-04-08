@@ -4,6 +4,8 @@ import ProgressBar from 'progressbar.js';
 
 class Shape extends Component{
   
+  let myshape
+  
   constructor(){
     
     super();
@@ -12,6 +14,14 @@ class Shape extends Component{
     
   }
   
+  
+  componentDidUpdate(prevProps, prevState){
+    
+    if(this.props.progress !== prevProps.progress){
+      myshape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5);
+    }
+    
+  }
   
   
   componentDidMount(){
@@ -34,6 +44,7 @@ class Shape extends Component{
     input_options.text = text_val;
     
     shape = new ShapeType(this.progressBar.current, input_options, this.props.callback);
+    myshape = shape
     
     // When a page loads, componentDidMount fires before readyState is set to complete. Animations then fire before some of the 
     // visible content is loaded, which results in visible jank and lack of animation.
