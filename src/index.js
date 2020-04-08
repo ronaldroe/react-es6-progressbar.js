@@ -17,7 +17,10 @@ class Shape extends Component{
   
   componentDidUpdate(prevProps, prevState){
     
+    console.log("Updates to progressbar received",this.props)
+    
     if(this.props.progress !== prevProps.progress){
+      console.log("trying to animate")
       myshape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5);
     }
     
