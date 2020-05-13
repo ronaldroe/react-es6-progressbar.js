@@ -10,6 +10,8 @@ class Shape extends Component{
     
     this.progressBar = createRef();
     
+    this.shape;
+
   }
   
   
@@ -26,14 +28,14 @@ class Shape extends Component{
       ShapeType = ProgressBar.Circle;
     }
     
-    
     text_val = typeof this.props.options.text === 'string' ? {value: this.props.options.text} : this.props.options.text;
     
     let input_options = this.props.options;
     
     input_options.text = text_val;
+
+    this.shape = new ShapeType(this.progressBar.current, input_options, this.props.callback);
     
-    shape = new ShapeType(this.progressBar.current, input_options, this.props.callback);
     
     // When a page loads, componentDidMount fires before readyState is set to complete. Animations then fire before some of the 
     // visible content is loaded, which results in visible jank and lack of animation.
@@ -42,7 +44,7 @@ class Shape extends Component{
 
       if(document.readyState === 'complete'){
 
-        shape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5);
+        this.shape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5);
         
         clearInterval(chkRdy);
 
@@ -51,6 +53,10 @@ class Shape extends Component{
     }, 50)
 
     
+  }
+
+  componentDidUpdate(){
+    this.shape.animate(typeof this.props.progress !== 'undefined' ? this.props.progress : 0.5);
   }
   
   render(){
